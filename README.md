@@ -26,5 +26,17 @@ Durante o teste, o sistema identificou o IP atacante `192.168.100.9` tentando re
 A regra de bloqueio foi inserida dinamicamente na chain de INPUT:
 `DROP all -- 192.168.100.9 0.0.0.0/0`
 
+# 🛡️ Atualização (19/04/2026)
+
+## 🚀 Evolução: Integração ChatOps (Discord)
+Para elevar o nível de monitoramento, implementei uma integração via **Webhooks** com o Discord. 
+
+- **Automação**: O Wazuh agora executa um script customizado em Bash sempre que um ataque é detectado.
+- **Extração de Dados**: O script realiza o parsing do JSON gerado pelo Wazuh para identificar o IP atacante em tempo real.
+- **Notificação Instantânea**: A equipe de segurança recebe o alerta no chat com detalhes do incidente, permitindo uma resposta muito mais rápida.
+
+### 📁 Novos Arquivos no Repositório
+* `scripts/discord-notifier.sh`: Script em Bash para integração via Webhook.
+
 ---
 *Projeto desenvolvido para fins de estudo em Segurança Defensiva e Operações de SOC.*
