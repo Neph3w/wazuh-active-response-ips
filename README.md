@@ -40,3 +40,5 @@ Para elevar o nível de monitoramento, implementei uma integração via **Webhoo
 
 ---
 *Projeto desenvolvido para fins de estudo em Segurança Defensiva e Operações de SOC.*
+
+![Alerta](./img/alerta-discord.png)
