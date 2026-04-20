@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# URL do seu Webhook
-WEBHOOK_URL=""
+WEBHOOK_URL=" "
 
 read -r INPUT
 IP_ATACANTE=$(echo $INPUT | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 
-# Se por algum motivo o IP vier vazio, definimos um padrão
 if [ -z "$IP_ATACANTE" ]; then
     IP_ATACANTE="IP Não Identificado"
 fi
