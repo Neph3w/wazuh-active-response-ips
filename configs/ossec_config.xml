@@ -1,0 +1,28 @@
+<ossec_config>
+  <command>
+    <name>firewall-drop</name>
+    <executable>firewall-drop</executable>
+    <expect>srcip</expect>
+    <timeout_allowed>yes</timeout_allowed>
+  </command>
+
+  <command>
+    <name>discord-alert</name>
+    <executable>discord-notifier.sh</executable>
+    <expect>srcip</expect>
+  </command>
+
+  <active-response>
+    <disabled>no</disabled>
+    <command>firewall-drop</command>
+    <location>local</location>
+    <level>10</level>
+    <timeout>600</timeout>
+  </active-response>
+
+  <active-response>
+    <command>discord-alert</command>
+    <location>server</location>
+    <level>10</level>
+  </active-response>
+</ossec_config>
