@@ -1,5 +1,3 @@
-#!/bin/bash
-
 WEBHOOK_URL=" "
 
 read -r INPUT
