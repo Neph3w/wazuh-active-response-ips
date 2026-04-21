@@ -2,7 +2,6 @@
   <command>
     <name>firewall-drop</name>
     <executable>firewall-drop</executable>
-    <expect>srcip</expect>
     <timeout_allowed>yes</timeout_allowed>
   </command>
 
@@ -13,9 +12,9 @@
   </command>
 
   <active-response>
-    <disabled>no</disabled>
     <command>firewall-drop</command>
     <location>local</location>
+    <rules_group>authentication_failures</rules_group>
     <level>10</level>
     <timeout>600</timeout>
   </active-response>
