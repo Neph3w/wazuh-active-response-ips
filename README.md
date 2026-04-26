@@ -45,9 +45,10 @@ O lab simula um cenário realista de SOC Tier 1, onde o analista não precisa in
 
 ## 🎯 Mapeamento MITRE ATT&CK
 
-| Tática | Técnica | Sub-técnica | Descrição |
-|--------|---------|-------------|-----------|
-| Credential Access | T1110 | T1110.001 — Password Guessing | Tentativas repetidas de login SSH com senhas diferentes |
+| Tática | Técnica | ID | Descrição |
+|---|---|---|---|
+| Credential Access | Brute Force | [T1110](https://attack.mitre.org/techniques/T1110/) | Tentativas repetidas de login via SSH |
+| Defense Evasion | — | — | Mitigado via Active Response automática |
 
 **Controles defensivos implementados:**
 
