@@ -103,6 +103,26 @@ O Wazuh classifica eventos em uma escala de 0 a 15. Níveis abaixo de 10 podem r
 
 **3. Timeout** — o IP permanece bloqueado por 600 segundos (10 minutos), tempo suficiente para interromper o ataque sem bloquear permanentemente um IP que poderia ser legítimo.
 
+### 🔗 Integração com AbuseIPDB
+
+A partir da v2 do projeto, o `discord-notifier.sh` foi aprimorado com enriquecimento de inteligência de ameaças via **AbuseIPDB API**.
+
+A cada bloqueio acionado, o sistema consulta automaticamente a reputação do IP atacante e envia no canal de SOC:
+
+| Campo | Descrição |
+|---|---|
+| Score de Reputação | 0–100, baseado em reports da comunidade |
+| País / ISP | Geolocalização e provedor do atacante |
+| Total de Reports | Quantas vezes o IP foi reportado globalmente |
+| Último Report | Data do report mais recente |
+| Nó TOR | Se o IP pertence à rede TOR |
+| Fonte | Link direto pro perfil do IP no AbuseIPDB |
+
+A cor do embed no Discord varia automaticamente conforme o risco:
+- 🔴 Vermelho — score ≥ 80
+- 🟡 Amarelo — score entre 40 e 79
+- 🟢 Verde — score abaixo de 40
+
 ---
 
 ## 🤖 Integração ChatOps — Discord Webhook
@@ -178,29 +198,6 @@ wazuh-active-response-ips/
 │   └── alerta-discord.png  # Print do alerta recebido no Discord
 └── README.md
 ```
----
-
-## ⚙️ Implementação Técnica
-
-### 🔗 Integração com AbuseIPDB
-
-A partir da v2 do projeto, o `discord-notifier.sh` foi aprimorado com enriquecimento de inteligência de ameaças via **AbuseIPDB API**.
-
-A cada bloqueio acionado, o sistema consulta automaticamente a reputação do IP atacante e envia no canal de SOC:
-
-| Campo | Descrição |
-|---|---|
-| Score de Reputação | 0–100, baseado em reports da comunidade |
-| País / ISP | Geolocalização e provedor do atacante |
-| Total de Reports | Quantas vezes o IP foi reportado globalmente |
-| Último Report | Data do report mais recente |
-| Nó TOR | Se o IP pertence à rede TOR |
-| Fonte | Link direto pro perfil do IP no AbuseIPDB |
-
-A cor do embed no Discord varia automaticamente conforme o risco:
-- 🔴 Vermelho — score ≥ 80
-- 🟡 Amarelo — score entre 40 e 79
-- 🟢 Verde — score abaixo de 40
 
 ---
 
