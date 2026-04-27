@@ -203,10 +203,10 @@ wazuh-active-response-ips/
 
 ## 🔭 Próximos Passos
 
-- [ ] Integrar com **TheHive** para abertura automática de casos a cada bloqueio
-- [✅] Adicionar enriquecimento de IP com **AbuseIPDB** (reputação do atacante)
-- [ ] Criar dashboard no **Kibana** para visualização dos bloqueios ao longo do tempo
-- [ ] Implementar whitelist dinâmica via script para proteger IPs administrativos
+🔄 Integrar com **TheHive** para abertura automática de casos a cada bloqueio
+✅ Adicionar enriquecimento de IP com **AbuseIPDB** (reputação do atacante)
+🔄 Criar dashboard no **Kibana** para visualização dos bloqueios ao longo do tempo
+🔄 Implementar whitelist dinâmica via script para proteger IPs administrativos
 
 ---
 
