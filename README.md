@@ -103,7 +103,7 @@ O Wazuh classifica eventos em uma escala de 0 a 15. Níveis abaixo de 10 podem r
 
 **3. Timeout** — o IP permanece bloqueado por 600 segundos (10 minutos), tempo suficiente para interromper o ataque sem bloquear permanentemente um IP que poderia ser legítimo.
 
-### 🔗 Integração com AbuseIPDB
+### Integração com AbuseIPDB
 
 A partir da v2 do projeto, o `discord-notifier.sh` foi aprimorado com enriquecimento de inteligência de ameaças via **AbuseIPDB API**.
 
