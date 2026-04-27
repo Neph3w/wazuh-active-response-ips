@@ -8,7 +8,7 @@
   <command>
     <name>discord-alert</name>
     <executable>discord-notifier.sh</executable>
-    <expect>srcip</expect>
+    <timeout_allowed>no</timeout_allowed>
   </command>
 
   <active-response>
@@ -21,7 +21,7 @@
 
   <active-response>
     <command>discord-alert</command>
-    <location>server</location>
+    <location>local</location>
     <level>10</level>
   </active-response>
 </ossec_config>
